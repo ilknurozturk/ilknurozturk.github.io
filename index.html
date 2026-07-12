@@ -17,6 +17,7 @@
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Oswald:700"
@@ -74,25 +75,34 @@
       color: #4e356c;
     }
 
-    .profile-photo {
-      width: 320px;
-      max-width: 100%;
-      height: auto;
-      display: block;
-      margin-bottom: 15px;
+    .home-layout {
+      display: grid;
+      grid-template-columns: 330px minmax(280px, 1fr) 230px;
+      column-gap: 35px;
+      align-items: start;
+      margin-top: 20px;
     }
 
-    .profile-name {
-      font-family: "Oswald", sans-serif;
-      font-size: 32px;
+    .profile-photo {
+      width: 330px;
+      max-width: none;
+      height: auto;
+      display: block;
     }
 
     .biography {
       text-align: justify;
     }
 
+    .profile-name {
+      font-family: "Oswald", sans-serif;
+      font-size: 32px;
+      line-height: 1.2;
+      margin-bottom: 25px;
+    }
+
     .sidebar-links {
-      margin-top: 8%;
+      margin-top: 25px;
     }
 
     .template-credit {
@@ -103,8 +113,43 @@
       margin-bottom: 10px;
     }
 
-    .main-section {
-      margin-top: 20px;
+    /*
+      Orta büyüklükteki ekranlarda fotoğraf ve yazı yan yana kalır.
+      Sağdaki iletişim bölümü aşağı geçer.
+    */
+    @media (max-width: 900px) {
+
+      .home-layout {
+        grid-template-columns: 330px minmax(250px, 1fr);
+        column-gap: 30px;
+      }
+
+      .sidebar {
+        grid-column: 1 / -1;
+        margin-top: 25px;
+      }
+
+    }
+
+    /*
+      Telefonda her şey alt alta gelir.
+    */
+    @media (max-width: 620px) {
+
+      .home-layout {
+        display: block;
+      }
+
+      .profile-photo {
+        width: 330px;
+        max-width: 100%;
+        margin-bottom: 25px;
+      }
+
+      .sidebar {
+        margin-top: 30px;
+      }
+
     }
 
   </style>
@@ -114,90 +159,112 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar custom-navbar navbar-static-top" role="navigation">
+  <nav class="navbar custom-navbar navbar-static-top"
+       role="navigation">
+
     <div class="container">
 
       <div class="navbar-header">
+
         <button type="button"
                 class="navbar-toggle collapsed"
                 data-toggle="collapse"
                 data-target="#main-navbar">
+
           <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
+
         </button>
+
       </div>
 
-      <div class="collapse navbar-collapse" id="main-navbar">
+      <div class="collapse navbar-collapse"
+           id="main-navbar">
+
         <ul class="nav navbar-nav">
-          <li class="active"><a href="index.html">Home</a></li>
-          <li><a href="publications.html">Publications</a></li>
-          <li><a href="talks.html">Talks</a></li>
-          <li><a href="teaching.html">Teaching</a></li>
-          <li><a href="conferences.html">Conferences</a></li>
+
+          <li class="active">
+            <a href="index.html">Home</a>
+          </li>
+
+          <li>
+            <a href="publications.html">Publications</a>
+          </li>
+
+          <li>
+            <a href="talks.html">Talks</a>
+          </li>
+
+          <li>
+            <a href="teaching.html">Teaching</a>
+          </li>
+
+          <li>
+            <a href="conferences.html">Conferences</a>
+          </li>
+
         </ul>
+
       </div>
 
     </div>
+
   </nav>
+
 
   <!-- Page Content -->
   <div class="container">
 
-    <div class="row main-section">
+    <div class="home-layout">
 
-      <!-- Main content -->
-      <div class="col-md-8">
+      <!-- Photo -->
+      <div class="photo-column">
 
-        <div class="row">
-
-          <!-- Photo -->
-          <div class="col-sm-5">
-            <img class="profile-photo"
-                 src="photo.jpg"
-                 alt="İlknur Öztürk">
-          </div>
-
-          <!-- Biography -->
-          <div class="col-sm-7 biography">
-            <p>
-              I am an incoming Ph.D. student in Mathematics at
-              Sabancı University, where I work under the supervision of
-              Prof. Ferruh Özbudak.
-            </p>
-
-            <p>
-              My research interests include coding theory, finite fields,
-              algebraic curves over finite fields, and generalized covering
-              radii of linear codes.
-            </p>
-
-            <p>
-              I recently defended my M.Sc. thesis in Mathematics at
-              Sabancı University. I completed my B.Sc. in Mathematics at
-              Galatasaray University in 2024 as the top-ranked student in
-              my department.
-            </p>
-
-            <p>
-              I am also interested in cryptography, computational methods
-              in finite fields, and applications of coding theory.
-            </p>
-          </div>
-
-        </div>
+        <img class="profile-photo"
+             src="photo.jpg"
+             alt="İlknur Öztürk">
 
       </div>
 
+
+      <!-- Biography -->
+      <div class="biography">
+
+        <p>
+          I am an incoming Ph.D. student in Mathematics at
+          Sabancı University, where I work under the supervision of
+          Prof. Ferruh Özbudak.
+        </p>
+
+        <p>
+          My research interests include coding theory, finite fields,
+          algebraic curves over finite fields, and generalized covering
+          radii of linear codes.
+        </p>
+
+        <p>
+          I recently defended my M.Sc. thesis in Mathematics at
+          Sabancı University. I completed my B.Sc. in Mathematics at
+          Galatasaray University in 2024 as the top-ranked student in
+          my department.
+        </p>
+
+        <p>
+          I am also interested in cryptography, computational methods
+          in finite fields, and applications of coding theory.
+        </p>
+
+      </div>
+
+
       <!-- Sidebar -->
-      <div class="col-md-4">
+      <div class="sidebar">
 
         <div class="profile-name">
           <b>İlknur Öztürk</b>
         </div>
-
-        <br>
 
         <p>
           <b>
@@ -223,7 +290,6 @@
             </a>
           </p>
 
-          <!-- Google Scholar linkin varsa aşağıya koy -->
           <!--
           <p>
             <a href="BURAYA_GOOGLE_SCHOLAR_LINKIN"
@@ -241,6 +307,7 @@
     </div>
 
   </div>
+
 
   <!-- Template Credit -->
   <a class="template-credit"
