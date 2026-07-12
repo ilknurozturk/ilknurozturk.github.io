@@ -11,7 +11,9 @@
   <title>İlknur Öztürk</title>
 
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
@@ -25,6 +27,11 @@
         type="text/css">
 
   <style>
+
+    body {
+      font-size: 15px;
+      line-height: 1.6;
+    }
 
     .custom-navbar {
       background-color: #d9c7f2;
@@ -71,9 +78,32 @@
     }
 
     .profile-photo {
-      width: 320px;
+      width: 280px !important;
       max-width: 100%;
       height: auto;
+      display: block;
+    }
+
+    .profile-name {
+      font-family: "Oswald", sans-serif;
+      font-size: 32px;
+    }
+
+    .biography {
+      margin-top: 3%;
+      text-align: justify;
+    }
+
+    .sidebar-links {
+      margin-top: 8%;
+    }
+
+    .template-credit {
+      color: #b5bec9;
+      font-size: 0.8em;
+      float: right;
+      margin-right: 10px;
+      margin-bottom: 10px;
     }
 
   </style>
@@ -83,7 +113,8 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar custom-navbar navbar-static-top" role="navigation">
+  <nav class="navbar custom-navbar navbar-static-top"
+       role="navigation">
 
     <div class="container">
 
@@ -94,7 +125,10 @@
                 data-toggle="collapse"
                 data-target="#main-navbar">
 
-          <span class="sr-only">Toggle navigation</span>
+          <span class="sr-only">
+            Toggle navigation
+          </span>
+
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
@@ -103,28 +137,39 @@
 
       </div>
 
-      <div class="collapse navbar-collapse" id="main-navbar">
+      <div class="collapse navbar-collapse"
+           id="main-navbar">
 
         <ul class="nav navbar-nav">
 
           <li class="active">
-            <a href="index.html">Home</a>
+            <a href="index.html">
+              Home
+            </a>
           </li>
 
           <li>
-            <a href="publications.html">Publications</a>
+            <a href="publications.html">
+              Publications
+            </a>
           </li>
 
           <li>
-            <a href="talks.html">Talks</a>
+            <a href="talks.html">
+              Talks
+            </a>
           </li>
 
           <li>
-            <a href="teaching.html">Teaching</a>
+            <a href="teaching.html">
+              Teaching
+            </a>
           </li>
 
           <li>
-            <a href="conferences.html">Conferences</a>
+            <a href="conferences.html">
+              Conferences
+            </a>
           </li>
 
         </ul>
@@ -144,15 +189,13 @@
       <!-- Main Column -->
       <div class="col-md-8">
 
-        <!-- Profile Photo -->
-        <img class="img-responsive profile-photo"
+        <img class="profile-photo"
              src="photo.jpg"
              alt="İlknur Öztürk">
 
         <br>
 
-        <!-- Biography -->
-        <div style="margin-top: 3%; text-align: justify;">
+        <div class="biography">
 
           <p>
             I am an incoming Ph.D. student in Mathematics at
@@ -186,7 +229,7 @@
       <!-- Sidebar -->
       <div class="col-md-4">
 
-        <div style="font-family: 'Oswald', sans-serif; font-size: 32px;">
+        <div class="profile-name">
           <b>İlknur Öztürk</b>
         </div>
 
@@ -206,21 +249,27 @@
           Istanbul, Türkiye
         </p>
 
-        <div style="margin-top: 8%;">
+        <div class="sidebar-links">
 
           <p>
             <a href="İlknur_Öztürk.pdf"
-               target="_blank">
+               target="_blank"
+               rel="noopener noreferrer">
               CV
             </a>
           </p>
 
+          <!-- Google Scholar bağlantısını ekleyince bu kısmı açabilirsin.
+
           <p>
-            <a href="GOOGLE_SCHOLAR_LINKIN"
-               target="_blank">
+            <a href="BURAYA_GOOGLE_SCHOLAR_LINKI"
+               target="_blank"
+               rel="noopener noreferrer">
               Google Scholar
             </a>
           </p>
+
+          -->
 
         </div>
 
@@ -232,13 +281,10 @@
 
 
   <!-- Template Credit -->
-  <a style="
-        color: #b5bec9;
-        font-size: 0.8em;
-        float: right;
-        margin-right: 10px;
-      "
-     href="https://github.com/mavroudisv/plain-academic">
+  <a class="template-credit"
+     href="https://github.com/mavroudisv/plain-academic"
+     target="_blank"
+     rel="noopener noreferrer">
 
     Plain Academic
 
