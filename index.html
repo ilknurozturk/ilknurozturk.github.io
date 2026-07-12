@@ -11,15 +11,12 @@
   <title>İlknur Öztürk</title>
 
   <meta charset="utf-8">
-
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link rel="stylesheet"
         href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Oswald:700"
@@ -78,10 +75,11 @@
     }
 
     .profile-photo {
-      width: 280px !important;
+      width: 320px;
       max-width: 100%;
       height: auto;
       display: block;
+      margin-bottom: 15px;
     }
 
     .profile-name {
@@ -90,7 +88,6 @@
     }
 
     .biography {
-      margin-top: 3%;
       text-align: justify;
     }
 
@@ -106,6 +103,10 @@
       margin-bottom: 10px;
     }
 
+    .main-section {
+      margin-top: 20px;
+    }
+
   </style>
 
 </head>
@@ -113,118 +114,81 @@
 <body>
 
   <!-- Navigation -->
-  <nav class="navbar custom-navbar navbar-static-top"
-       role="navigation">
-
+  <nav class="navbar custom-navbar navbar-static-top" role="navigation">
     <div class="container">
 
       <div class="navbar-header">
-
         <button type="button"
                 class="navbar-toggle collapsed"
                 data-toggle="collapse"
                 data-target="#main-navbar">
-
-          <span class="sr-only">
-            Toggle navigation
-          </span>
-
+          <span class="sr-only">Toggle navigation</span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
-
         </button>
-
       </div>
 
-      <div class="collapse navbar-collapse"
-           id="main-navbar">
-
+      <div class="collapse navbar-collapse" id="main-navbar">
         <ul class="nav navbar-nav">
-
-          <li class="active">
-            <a href="index.html">
-              Home
-            </a>
-          </li>
-
-          <li>
-            <a href="publications.html">
-              Publications
-            </a>
-          </li>
-
-          <li>
-            <a href="talks.html">
-              Talks
-            </a>
-          </li>
-
-          <li>
-            <a href="teaching.html">
-              Teaching
-            </a>
-          </li>
-
-          <li>
-            <a href="conferences.html">
-              Conferences
-            </a>
-          </li>
-
+          <li class="active"><a href="index.html">Home</a></li>
+          <li><a href="publications.html">Publications</a></li>
+          <li><a href="talks.html">Talks</a></li>
+          <li><a href="teaching.html">Teaching</a></li>
+          <li><a href="conferences.html">Conferences</a></li>
         </ul>
-
       </div>
 
     </div>
-
   </nav>
-
 
   <!-- Page Content -->
   <div class="container">
 
-    <div class="row">
+    <div class="row main-section">
 
-      <!-- Main Column -->
+      <!-- Main content -->
       <div class="col-md-8">
 
-        <img class="profile-photo"
-             src="photo.jpg"
-             alt="İlknur Öztürk">
+        <div class="row">
 
-        <br>
+          <!-- Photo -->
+          <div class="col-sm-5">
+            <img class="profile-photo"
+                 src="photo.jpg"
+                 alt="İlknur Öztürk">
+          </div>
 
-        <div class="biography">
+          <!-- Biography -->
+          <div class="col-sm-7 biography">
+            <p>
+              I am an incoming Ph.D. student in Mathematics at
+              Sabancı University, where I work under the supervision of
+              Prof. Ferruh Özbudak.
+            </p>
 
-          <p>
-            I am an incoming Ph.D. student in Mathematics at
-            Sabancı University, where I work under the supervision of
-            Prof. Ferruh Özbudak.
-          </p>
+            <p>
+              My research interests include coding theory, finite fields,
+              algebraic curves over finite fields, and generalized covering
+              radii of linear codes.
+            </p>
 
-          <p>
-            My research interests include coding theory, finite fields,
-            algebraic curves over finite fields, and generalized covering
-            radii of linear codes.
-          </p>
+            <p>
+              I recently defended my M.Sc. thesis in Mathematics at
+              Sabancı University. I completed my B.Sc. in Mathematics at
+              Galatasaray University in 2024 as the top-ranked student in
+              my department.
+            </p>
 
-          <p>
-            I recently defended my M.Sc. thesis in Mathematics at
-            Sabancı University. I completed my B.Sc. in Mathematics at
-            Galatasaray University in 2024 as the top-ranked student in
-            my department.
-          </p>
-
-          <p>
-            I am also interested in cryptography, computational methods
-            in finite fields, and applications of coding theory.
-          </p>
+            <p>
+              I am also interested in cryptography, computational methods
+              in finite fields, and applications of coding theory.
+            </p>
+          </div>
 
         </div>
 
       </div>
-
 
       <!-- Sidebar -->
       <div class="col-md-4">
@@ -259,16 +223,15 @@
             </a>
           </p>
 
-          <!-- Google Scholar bağlantısını ekleyince bu kısmı açabilirsin.
-
+          <!-- Google Scholar linkin varsa aşağıya koy -->
+          <!--
           <p>
-            <a href="BURAYA_GOOGLE_SCHOLAR_LINKI"
+            <a href="BURAYA_GOOGLE_SCHOLAR_LINKIN"
                target="_blank"
                rel="noopener noreferrer">
               Google Scholar
             </a>
           </p>
-
           -->
 
         </div>
@@ -279,15 +242,12 @@
 
   </div>
 
-
   <!-- Template Credit -->
   <a class="template-credit"
      href="https://github.com/mavroudisv/plain-academic"
      target="_blank"
      rel="noopener noreferrer">
-
     Plain Academic
-
   </a>
 
 </body>
